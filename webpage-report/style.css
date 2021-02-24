@@ -1,0 +1,48 @@
+html {
+    margin: 0px;
+    padding: 0px;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #41403f;
+}
+
+.header {
+    padding: 1% 3% 1% 3%;
+    text-align: center;
+    color: white;
+    background-color: #5d615e;
+}
+
+.report {
+    text-align: center;
+}
+
+.content {
+    margin: 0% 20% 0% 20%;
+    padding: 1% 3% 1% 3%;
+    background-color: white;
+}
+
+.questions {
+    list-style-type: none;
+    padding-left: 2%;
+}
+
+.answers {
+    padding-left: 6%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.microwaveGif {
+    height: 50vh;
+}
