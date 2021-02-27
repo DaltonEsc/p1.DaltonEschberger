@@ -203,134 +203,176 @@ void ComputeTimerDigits(){
 }
 
 void TensUp(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
   if(Minutes+10<=90){
     Minutes+=10;
   }
 }
 
 void TensDown(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
   if(Minutes-10>=0){
     Minutes-=10;
   }
 }
 
 void OnesUp(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
   if(Minutes+1<=99.99){
     Minutes+=1;
   }
 }
 
 void OnesDown(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
   if(Minutes-1>=0){
     Minutes-=1;
   }
 }
 
 void TensSecUp(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
   if(Seconds+10 <=99){
     Seconds+=10;
   }
 }
 
 void TensSecDown(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
    if(Seconds-10 >=0){
     Seconds-=10;
   }
 }
 
 void SecUP(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
   if(Seconds+1 <=99){
     Seconds+=1;
   }
 }
 
 void SecDown(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
   if(Seconds-1 >=0){
     Seconds-=1;
   }
 }
 
 void OneMin(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
   Seconds=0;
   Minutes =1;
 }
 
 void TwoMin(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
    Seconds=0;
   Minutes =2;
  }
 
 void ThreeMin(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
    Seconds=0;
   Minutes =3;
 }
 
 void FourMin(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
    Seconds=0;
   Minutes =4;
 }
 
 void FiveMin(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
    Seconds=0;
   Minutes =5;
 }
 
 void SixMin(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
    Seconds=0;
   Minutes =6;
  }
 
 void SevenMin(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
     Seconds =0;
   Minutes =7;
 }
 
 void EightMin(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
   Minutes =8;
 }
 
 void NineMin(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
   Minutes =9;
 }
 
 void AddThirtySec(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
     Seconds+=30;
 }
 
 void PowerUp(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
   if(Power+100<=1000){
     Power+=100;
   }
 }
 
 void PowerDown(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
   if(Power-100>=100){
     Power-=100;
   }
 }
 
 void ColorBlindMode(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
   if(ColorPosition+1<Colors.length){
     ColorPosition+=1;
   }
@@ -341,7 +383,9 @@ void ColorBlindMode(){
 }
 
 void DeafMode(){
-   ButtonClick.play();
+   if(!Silent){
+    ButtonClick.play();
+  }
   if(Deaf){
     Deaf = false;
   }
@@ -351,7 +395,9 @@ void DeafMode(){
 }
 
 void SilentMode(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
   if(Silent){
     Silent = false;
   }
@@ -361,7 +407,9 @@ void SilentMode(){
 }
 
 void ToggleTurn(){
-  ButtonClick.play();
+ if(!Silent){
+    ButtonClick.play();
+  }
   if(Turn){
     Turn=false;
   }
@@ -372,12 +420,16 @@ void ToggleTurn(){
 }
 
 void Cook(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
   MicrowaveMode = false;
 }
 
 void Timer(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
   MicrowaveMode =true;
 }
 
@@ -385,7 +437,9 @@ void Start(){
   if(!MicrowaveMode){
     Running.play();
   }
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
   MicrowaveState =true;
   if(MicrowaveMode){
       OpenClose=255255255;
@@ -397,7 +451,9 @@ void Start(){
 }
 
 void StopReset(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
   Running.stop();
   MicrowaveState=false;
   MicrowaveMode = false;
@@ -408,7 +464,9 @@ void StopReset(){
 }
 
 void Open(){
-  ButtonClick.play();
+  if(!Silent){
+    ButtonClick.play();
+  }
     Running.stop();
   MicrowaveState=false;
   OpenClose=255239194;
