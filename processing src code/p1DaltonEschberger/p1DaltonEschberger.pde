@@ -133,7 +133,7 @@ void draw() {
   rect(525, 620, 200,120);
   fill(Colors[ColorPosition]/1000000,(Colors[ColorPosition]/1000)%1000, (Colors[ColorPosition])%1000);
   textSize(20);
-  text("Turn Table: "+Turn,540,645);
+  text("Turn Table: "+Translate(),540,645);
   fill(255);
   
   
@@ -180,6 +180,16 @@ void draw() {
     rect(5, 10, 990, 470, 50);
   }
 }
+String Translate(){
+  if(Turn){
+    return "On";
+  }
+  else{
+    return "Off";
+  }
+}
+
+
 void Alarm(){
   OpenClose=255255255;
   Running.stop();
